@@ -1,0 +1,103 @@
+.movie-complex {
+    background-color: var(--color-violet);
+    padding-top: 3%;
+    padding-bottom: 3%;
+
+    .movie-screen {
+
+        margin-left: 20%;
+        margin-bottom: 8px;
+        padding: 5px;
+        text-align: center;
+        background-color: rgb(160, 148, 255);
+        border-radius: 25%;
+        height: 50px;
+        width: 130vh;
+
+        p {
+            font-family: 'Kanit', sans-serif;
+            font-size: 20px;
+            color: white;
+        }
+
+
+    }
+
+    .movie-button {
+
+        display: flex;
+        padding: 10px;
+        width: 600px;
+        margin-left: 35%;
+        margin-top: 2%;
+        button {
+            border-radius: 0 25% 0 25%;
+            width: 200px;
+            height: 50px;
+            margin-left: 50px;
+            background-color: rgb(186, 125, 247);
+        }
+    }
+
+}
+
+
+
+
+.row {
+    margin-left: 20%;
+   
+    
+    align-items: flex-start;
+    display: flex;
+    width: 130vh;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .colSeat {
+        padding: 0px 10px;
+        
+      
+        .seat {
+            text-align: center;
+            color: rebeccapurple;
+            width: 70px;
+            height: 70px;
+            border-radius: 50% 50% 0px 0px;
+            margin: 5px;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    
+        .seat:hover {
+            transform: scale(1.1);
+    
+        }
+        .seat-default {
+            background-color: rgb(227, 247, 154);
+        }
+        
+        .seat-booked {
+            background-color: gray;
+            color: white;
+            &:hover {
+                cursor: not-allowed;
+            }
+            
+        }
+        
+        
+        .seat-choosing {
+            background-color: black;
+            color: blue;
+        }
+        
+        .seat-undefined {
+            cursor: auto;
+            pointer-events: none;
+        }
+    }
+}
+
+
