@@ -1,44 +1,59 @@
 import React from "react";
 import {AiOutlineFieldTime} from "react-icons/ai"
 import "../DetailFilm/DetailFilm.scss"
+import icon from "../../assets/images/ytb2.png"
 
 function DetailFilm(props){
 
-    const movie ="https://www.cgv.vn/media/catalog/product/cache/1/image/c5f0a1eff4c394a251036189ccddaacd/l/d/ld_poster_nkc_m_i_1_.jpg";
+    const movie ="https://i.etsystatic.com/27089413/r/il/ddfeb8/2795688212/il_570xN.2795688212_glob.jpg";
     return(
-        <div className="Film">
-            <div className="title">
-                
-                     <img src={movie} alt="movie - vd"></img>
-                
-               
-                <div className="detail">
+
+        <div className="detailFilm">
+  <div className="Film">
+            <div className="pic">
+                <img src={movie} alt="movie - vd"></img>
+            </div>
+
+            <div className="text">
+            <div className="detail">
                         <h1 className="name">
                         {props.film.Title}
                     </h1>
-                    <button>Đánh giá</button>
-                    <div className="time">
-                        <AiOutlineFieldTime className="inLine"/>
-                        <p className="inLine">166 phút</p>
-                    </div>
-                    <p>Đạo diễn: <span>Adisorn Tresirikasem</span></p>
-                    <p>Thể loại: <span>Hài, Lãng Mạn</span> </p>
-                    <p>Diễn viên: <span>Ranee Campen, Thannavat Vatthannaputi</span></p>
-                    <p>Quốc gia: <span>Thái lan</span></p>
-                    <p>Ngày khởi chiếu: <span>9/9/2022</span></p>
-                </div>
-               
+                    
+                    <span className="tt">Khởi chiếu: </span> <span>{props.film.Released}</span><br/>
+                    <span className="tt">Thể loại: </span> <span>{props.film.Genre}</span><br/>
+                    <span className="tt">Đạo diễn: </span> <span>{props.film.Director}</span><br/>
+                    <span className="tt">Diễn viên: </span> <span>{props.film.Actors}</span><br/>
+                    <span className="tt">Quốc gia: </span> <span>{props.film.Country}</span><br/>
+                   
             </div>
-
             <div className="content">
                 <h1>Nội dung phim</h1>
-                <span>
-                Gaysorn (Ranee Campen) – tiểu thư sống ở thời Rattanakosin chính là kiếp sau của Karaket ở triều đại AVVHyutthaya. Có lẽ bởi vậy mà Gaysorn đã chiếm trọn trái tim của Bhop (Thanavat Vatthanaputi) – cũng là hậu duệ của Dej – ngay từ lần đầu gặp mặt. Chàng kỹ sư tài năng đã luôn mơ về một người con gái có gương mặt giống Gaysorn trong suốt 10 năm qua, và nghĩ rằng cô chính là tri kỉ mà mình đang tìm kiếm.
-                Phim mới Ngược Dòng Thời Gian Để Yêu Anh ra mắt tại các rạp chiếu phim từ 09.09.2022. Xem thêm tại: https://www.galaxycine.vn/dat-ve/love-destiny-the-movie.
-                </span>
+               <span>Virus cuồng loạn kể về một đoàn phim đang quay tác phẩm về đề tài zombie tại một khu nghỉ dưỡng thuộc vùng núi. Tại đây, cả đoàn đã gặp nạn zombie thật chứ không còn là hình ảnh trên phim nữa. Nguồn cơn chính là do những thực phẩm độc hại, không rõ nguồn gốc được bán rộng rãi trên thị trường đã làm con người ngộ độc. Đoàn phim zombie đã phải đấu tranh để sống sót và tìm đường đến được sân bay để tìm sự trợ giúp từ chính phủ và quân đội.</span>
+                </div>
+            <div className="foo">
+                <div className="a">
+                        <img src={icon}></img>
+                       <div>TRAILER</div>
+                </div>
+             
+                <div className="b">Mua vé</div>
             </div>
 
+            </div>
+
+           
+        
+            
         </div>
+
+
+     
+        </div>
+      
+
+
+           
     )
 }
 

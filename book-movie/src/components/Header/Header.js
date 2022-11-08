@@ -3,6 +3,8 @@ import {MdSearch} from 'react-icons/md'
 import {AiOutlineUser} from 'react-icons/ai'
 import { useScrollY } from '../hooks/useScrollY';
 import styled from 'styled-components'
+
+import {Link} from 'react-router-dom';
 function Header (props) {
     const [scrollY] = useScrollY();
     return(
@@ -16,11 +18,14 @@ function Header (props) {
                     <MdSearch className="iconSearch"/>
                     <input type="text" placeholder="Nhập từ khoá để tìm kiếm phim..." />
                 </div>
-
+              
+               
+                    
                 <div className="login">
-                    <AiOutlineUser className="iconUser"/>
-                    <span className="loginText">Đăng nhập</span>
+                        <AiOutlineUser className="iconUser"/>
+                        <span className="loginText">Đăng nhập</span>
                 </div>
+              
 
                 <div className="language">
                     <span className="languageText">VI|EN</span>
@@ -122,3 +127,5 @@ const Navigation = styled.div`
         }
     }
 `;
+
+

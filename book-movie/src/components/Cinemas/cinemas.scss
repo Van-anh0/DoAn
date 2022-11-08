@@ -14,11 +14,11 @@
         font-weight: bold;
     }
     .line{
-        margin-left: 37%;
-        width: 420px;
+        margin-left: 35%;
+        width: 440px;
         height: 2px;
         
-        background-color: red;
+        background-color: white;
     }
 }
 
@@ -27,7 +27,7 @@
     padding-top: 5%;
     padding-bottom: 5%;
     display: grid;
-    padding-left: 20%;
+    padding-left: 15%;
     grid-template-columns: repeat(2,500px);
    
     gap:20px;

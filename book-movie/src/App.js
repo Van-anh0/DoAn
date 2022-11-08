@@ -8,17 +8,19 @@ import Detail from './pages/Detail';
 import Showtimes from './pages/Showtimes';
 import Cinema from './pages/Cinema';
 import Introduce from './pages/Introduce';
-
+import Login from './pages/Login';
 function App() {
   return (
     <div className="App">
+ 
+  
+  <BrowserRouter>
       <Header/>
     {/* <Home/> */}
     {/* <Detail/> */}
 
- 
-    <BrowserRouter>
-	<Navbar />
+	    <Navbar />
+  
 	<Routes>
 		<Route path="/" exact element={<Home/>} />
 		<Route path="/showtimes" element={<Showtimes/>} />

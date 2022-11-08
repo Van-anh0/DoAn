@@ -1,5 +1,5 @@
 .movie-complex {
-    background-color: var(--color-violet);
+    background-color: #EAE2D6;
     padding-top: 3%;
     padding-bottom: 3%;
 
@@ -9,7 +9,7 @@
         margin-bottom: 8px;
         padding: 5px;
         text-align: center;
-        background-color: rgb(160, 148, 255);
+        background-color: #68A225;
         border-radius: 25%;
         height: 50px;
         width: 130vh;
@@ -35,7 +35,11 @@
             width: 200px;
             height: 50px;
             margin-left: 50px;
-            background-color: rgb(186, 125, 247);
+            background-color: #68A225;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
         }
     }
 
@@ -61,13 +65,14 @@
         .seat {
             text-align: center;
             color: rebeccapurple;
-            width: 70px;
-            height: 70px;
+            width: 60px;
+            height: 60px;
             border-radius: 50% 50% 0px 0px;
             margin: 5px;
             font-size: 20px;
             font-weight: bold;
             cursor: pointer;
+            user-select: none;
         }
     
         .seat:hover {
@@ -75,11 +80,11 @@
     
         }
         .seat-default {
-            background-color: rgb(227, 247, 154);
+            background-color: #B3DE81;
         }
         
         .seat-booked {
-            background-color: gray;
+            background-color: #265C00;
             color: white;
             &:hover {
                 cursor: not-allowed;
@@ -93,10 +98,7 @@
             color: blue;
         }
         
-        .seat-undefined {
-            cursor: auto;
-            pointer-events: none;
-        }
+     
     }
 }
 
