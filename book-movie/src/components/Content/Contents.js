@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { useState } from "react";
 import {FiChevronLeft, FiChevronRight} from 'react-icons/fi';
+import { Link } from "react-router-dom";
 const movies = [
     "https://arena.fpt.edu.vn/wp-content/uploads/2021/04/5-yeu-to-tao-nen-mot-poster-phim-an-tuong.jpeg",
     "https://i.imgur.com/plLvz9w.jpg",
@@ -21,24 +22,25 @@ function Contents(props) {
    const goLeft = () => {
     console.log(x);
 
-    x === 0? setX(-100*(movies.length-4)) : setX(x+100);
+    x === 0? setX(-100*(props.films.length-4)) : setX(x+100);
    };
    const goRight = () => {
     console.log(x);
-    x === -100 * (movies.length - 4)? setX(0) : setX(x-100);
+    x === -100 * (props.films.length - 4)? setX(0) : setX(x-100);
    };
 
     return (
         <MoviesRowContainer>
-            <h1 className="heading">Phim đang chiếu</h1>
             <MoviesSlider>
 
                 {
-                    movies.map((movie, index) => (
+                    props.films.map((movie, index) => (
+                        <Link to={"/detail/"+index} onClick={() => {}}>
                         <div key={index} className="movieItem" style={{transform: `translateX(${x}%)`}}> 
-                            <img src={movie} alt="movie-item" />
-                            <div className="movieName">Movie Name</div>
+                            <img src={movie.Poster} alt={movie.Title} />
+                            <div className="movieName">{movie.Title}</div>
                         </div>
+                        </Link>
                     ))
                 }
 
@@ -138,7 +140,7 @@ const MoviesRowContainer = styled.div`
 `;
 
 const MoviesSlider = styled.div`
-// border: 1px solid red;
+ //border: 1px solid red;
 
     width: 100%;
     height: 526px;
@@ -149,6 +151,7 @@ const MoviesSlider = styled.div`
     align-items:center;
     gap: 15px;
 
+
     /* không cho tràn thành phần con */
     overflow: hidden; 
 
@@ -157,7 +160,7 @@ const MoviesSlider = styled.div`
     }
     .movieItem {
         min-width: 300px;
-        height: 100%; 
+        height: 525px; 
     
         transition: all 0.3s linear;
         user-select: none;
@@ -185,7 +188,8 @@ const MoviesSlider = styled.div`
             right: 0;
             padding: 4px;
             text-align: center;
-            font-size: 16px;
+            font-size: 20px;
+            color:white;
             background-color: rgba(0,0,0,0.65);
         }
     }

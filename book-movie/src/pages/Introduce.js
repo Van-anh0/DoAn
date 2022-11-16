@@ -1,9 +1,10 @@
 import React from "react";
-import Detail from "./Detail";
-function Introduce(){
+import {  useParams } from "react-router";
+function Introduce(props){
+  
     return(
         <div>
-            <Detail/>
+            đây là trang giới thiệu
         </div>
       
     )

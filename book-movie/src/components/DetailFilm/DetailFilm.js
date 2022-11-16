@@ -11,7 +11,7 @@ function DetailFilm(props){
         <div className="detailFilm">
   <div className="Film">
             <div className="pic">
-                <img src={movie} alt="movie - vd"></img>
+                <img src={props.film.Poster} alt={props.film.Title}></img>
             </div>
 
             <div className="text">
@@ -29,7 +29,7 @@ function DetailFilm(props){
             </div>
             <div className="content">
                 <h1>Nội dung phim</h1>
-               <span>Virus cuồng loạn kể về một đoàn phim đang quay tác phẩm về đề tài zombie tại một khu nghỉ dưỡng thuộc vùng núi. Tại đây, cả đoàn đã gặp nạn zombie thật chứ không còn là hình ảnh trên phim nữa. Nguồn cơn chính là do những thực phẩm độc hại, không rõ nguồn gốc được bán rộng rãi trên thị trường đã làm con người ngộ độc. Đoàn phim zombie đã phải đấu tranh để sống sót và tìm đường đến được sân bay để tìm sự trợ giúp từ chính phủ và quân đội.</span>
+               <span>{props.film.Plot}</span>
                 </div>
             <div className="foo">
                 <div className="a">

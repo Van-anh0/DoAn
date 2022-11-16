@@ -5,7 +5,7 @@ function Cinema(){
     return(
         <div>
             <SeatMatrix/>
-            <Footer/>
+            
         </div>
     )
 }

@@ -9,7 +9,7 @@ function Showtimes(){
           
             <Slider/>
             <ListFilm/>
-             <Footer/>
+         
         </div>
     )
 }
