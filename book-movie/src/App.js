@@ -11,6 +11,8 @@ import Login from './pages/Login';
 import ModalLog from './components/modal/modalLogin';
 import Footer from './components/Footer/Footer';
 import Introduce from './pages/Introduce';
+import SeatPage from './pages/SeatPage';
+import PayPage from './pages/PayPage';
 function App() {
   return (
     <div className="App">
@@ -28,7 +30,8 @@ function App() {
 		<Route path="/cinema" element={<Cinema/>} />
 		<Route path="/introduce" element={<Introduce/>} />
 		<Route path="/detail/:filmId" element={<DetailP/>} /> 
-
+		<Route path="/lichchieu" element={<SeatPage/>} /> 
+		<Route path="/thanhtoan" element={<PayPage/>} /> 
 	</Routes>
 
 	<Footer/>

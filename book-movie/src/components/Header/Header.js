@@ -1,14 +1,14 @@
 import Netflixlogo from '../../assets/images/logoHeader.png'
 import {MdSearch} from 'react-icons/md'
 import {AiOutlineUser} from 'react-icons/ai'
-import { useScrollY } from '../hooks/useScrollY'
+
 import styled from 'styled-components'
 import "../Header/Header.scss"
 import {Link} from 'react-router-dom'
 import ModalSign from '../modal/modalSignup'
 import ModalLog from '../modal/modalLogin'
 function Header (props) {
-    const [scrollY] = useScrollY();
+   
     return(
         
             <div className="navContainer">
@@ -33,7 +33,7 @@ function Header (props) {
               
 
                 <div className="language">
-                    <span className="languageText">VI|EN</span>
+                    <span className="languageText">VI | EN</span>
                 </div>
                </div>
                

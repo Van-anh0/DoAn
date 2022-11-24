@@ -1,5 +1,6 @@
 import React from "react";
 import "./ListFilm.scss"
+import { Link } from "react-router-dom";
 const movie = "https://www.cgv.vn/media/catalog/product/cache/1/image/c5f0a1eff4c394a251036189ccddaacd/y/_/y_u_qu_i_to_n_th_-_payoff_poster_-_kt_facebook_-_kc_04112022_1_.jpg";
 function ListFilm(){
     return(
@@ -7,7 +8,9 @@ function ListFilm(){
             <div className="listFilm">
             
                      <div className="film">
-                        <div className="filmDT">
+                     <Link to={"/detail/5"} onClick={() => {}}>
+
+                         <div className="filmDT">
                             <div className="pic">
                                 <img src={movie} alt="yêu quái toàn thư"></img>
                             </div>
@@ -19,14 +22,28 @@ function ListFilm(){
                                 </p>
                             </div>
                         </div>
+                     </Link>
+                       
                     
 
                         <div className="dateTime">
+                            <div className="cinemas">
+                                <select>
+                                    <option>Cinetar Đà Lạt</option>
+                                    <option>Cinetar Huế</option>
+                                    <option>Cinetar Mĩ Tho</option>
+                                    <option>Cinetar Kiên Giang</option>
+                                </select>
+                            </div>
+
                             <div className="date">
                                     05/11/2022
                             </div>
                             <div className="time">
-                                <button>09:00</button>
+                                    <Link to={"/lichchieu"} onClick={() => {}}>
+                                    <button>09:00</button>
+                                    </Link>
+                                
                                 <button>10:00</button>
                                 <button>13:00</button>
                                 <button>15:00</button>
@@ -39,7 +56,6 @@ function ListFilm(){
                         </div>
                     </div>
 
-                    
                     <div className="film">
                         <div className="filmDT">
                             <div className="pic">
@@ -56,6 +72,15 @@ function ListFilm(){
                     
 
                         <div className="dateTime">
+                            <div className="cinemas">
+                                <select>
+                                    <option>Cinetar Đà Lạt</option>
+                                    <option>Cinetar Huế</option>
+                                    <option>Cinetar Mĩ Tho</option>
+                                    <option>Cinetar Kiên Giang</option>
+                                </select>
+                            </div>
+
                             <div className="date">
                                     05/11/2022
                             </div>
@@ -73,7 +98,7 @@ function ListFilm(){
                         </div>
                     </div>
 
-                    
+
                     <div className="film">
                         <div className="filmDT">
                             <div className="pic">
@@ -90,6 +115,15 @@ function ListFilm(){
                     
 
                         <div className="dateTime">
+                            <div className="cinemas">
+                                <select>
+                                    <option>Cinetar Đà Lạt</option>
+                                    <option>Cinetar Huế</option>
+                                    <option>Cinetar Mĩ Tho</option>
+                                    <option>Cinetar Kiên Giang</option>
+                                </select>
+                            </div>
+
                             <div className="date">
                                     05/11/2022
                             </div>
@@ -107,6 +141,8 @@ function ListFilm(){
                         </div>
                     </div>
 
+                    
+                    
 
                
              

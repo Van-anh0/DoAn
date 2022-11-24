@@ -1,10 +1,13 @@
 import React from "react";
 import {  useParams } from "react-router";
+import Cinetar from "../components/Introduce/Cinestar";
+import Slider from "../components/Slider/Slider";
 function Introduce(props){
   
     return(
         <div>
-            đây là trang giới thiệu
+            <Slider/>
+           <Cinetar/>
         </div>
       
     )
